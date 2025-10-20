@@ -1,8 +1,10 @@
 import logging
 from Scraper.settings import TIMEOUT
+from Scraper.storage import file_type
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+
 
 def found_activity(driver, original_window):
     try:
@@ -31,13 +33,7 @@ def found_activity(driver, original_window):
         export_div = wait_export.until(EC.element_to_be_clickable((By.XPATH, '//i[contains(@class, "export-icon") and @title="Export"]')))
         export_div.click()
 
-        #Download file
-        wait_down = WebDriverWait(driver,TIMEOUT)
-        download = wait_down.until(EC.element_to_be_clickable((By.XPATH, "(//div[contains(@class, 'export-activity__file-type-icon')])[2]")))
-        #download = wait_down.until(EC.element_to_be_clickable((By.XPATH, '//div[i[contains(@class, "icontcx")]]')))
-        download.click()
-
-        logging.info("Downloading File")
+        file_type(driver,2)
 
         #if(download.click and wait_quit):
         #   driver.quit()
@@ -47,3 +43,5 @@ def found_activity(driver, original_window):
             logging.error("The file can not be downloaded")
         else:
             logging.error("No activty found")
+
+

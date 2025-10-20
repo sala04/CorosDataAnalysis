@@ -1,10 +1,10 @@
 Strating scraper...
 Downloading main page...
 Scraping completed succesfully.
-2025-10-16 12:51:25,295 [INFO] Logger inicializado en C:\Users\salsa\PycharmProjects\CorosDataAnalysis\Logs\scraper.log
-2025-10-16 12:51:25,295 [INFO] Creating drivers
-2025-10-16 12:51:25,295 [INFO] ====== WebDriver manager ======
-2025-10-16 12:51:27,121 [INFO] Get LATEST geckodriver version for 142.0 firefox
-2025-10-16 12:51:27,823 [INFO] Get LATEST geckodriver version for 142.0 firefox
-2025-10-16 12:51:28,448 [INFO] Driver [C:\Users\salsa\.wdm\drivers\geckodriver\win64\v0.36.0\geckodriver.exe] found in cache
-2025-10-16 12:51:42,636 [INFO] Downloading File
+2025-10-21 00:33:58,346 [INFO] Logger inicializado en C:\Users\salsa\PycharmProjects\CorosDataAnalysis\Logs\scraper.log
+2025-10-21 00:33:58,346 [INFO] Creating drivers
+2025-10-21 00:33:58,347 [INFO] ====== WebDriver manager ======
+2025-10-21 00:33:59,786 [INFO] Get LATEST geckodriver version for 142.0 firefox
+2025-10-21 00:34:00,477 [INFO] Get LATEST geckodriver version for 142.0 firefox
+2025-10-21 00:34:01,029 [INFO] Driver [C:\Users\salsa\.wdm\drivers\geckodriver\win64\v0.36.0\geckodriver.exe] found in cache
+2025-10-21 00:34:21,450 [INFO] Downloading File
