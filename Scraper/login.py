@@ -1,7 +1,6 @@
 import logging
 from Scraper.settings import Login_URL
-from Scraper.settings import username
-from Scraper.settings import password
+from Scraper.settings import data
 from selenium.webdriver.common.by import By
 
 
@@ -15,12 +14,12 @@ def login(driver):
         # User/Email
         login_user = driver.find_element(By.XPATH, '//input[@placeholder="Email"]')
         login_user.click()
-        login_user.send_keys(username)
+        login_user.send_keys(data["User"])
 
         # Password
         login_pass = driver.find_element(By.XPATH,'//input[@placeholder="Por favor introduzca una contraseña con 6-20 caracteres"]')
         login_pass.click()
-        login_pass.send_keys(password)
+        login_pass.send_keys(data["Password"])
 
         # Accept user terms
         Terms = driver.find_element(By.XPATH, '(//div[@class="arco-checkbox-icon"])[2]')

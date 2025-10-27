@@ -1,4 +1,5 @@
 from pathlib import Path
+import json
 
 
 Base_URL = "https://t.coros.com"
@@ -14,14 +15,17 @@ HEADLESS = False
 BASE_DIR = Path(__file__).resolve().parent
 ROOT_DIR = BASE_DIR.parent
 DOCS_DIR = ROOT_DIR / "Docs"
-archivo = DOCS_DIR / "PSW.txt"
+archivo = DOCS_DIR / "PSW.json"
+print(archivo)
 
-with open(archivo, "r", encoding="utf-8") as f:
-    for linea in f:
-        if "User:" in linea:
-            username = linea.split(":", 1)[1].strip()
-        if "Password:" in linea:
-            password = linea.split(":", 1)[1].strip()
+with open(archivo, "r", encoding="utf-8") as file:
+    data = json.load(file)
 
+
+print(data)
+# {'User': 'Jorge', 'Edad': 28, 'Ciudad': 'Madrid'}
+
+print(data["User"])
+# Jorge
 
 
