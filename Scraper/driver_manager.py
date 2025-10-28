@@ -21,13 +21,11 @@ def create_drivers (headless=False):
             options.add_argument("--window-size=1920,1080")
 
         # ⚙️ Configurar preferencias de descarga
-        FileDir = activity_folder()
-        print(FileDir)
-        options.set_preference("browser.download.folderList", 2)  # 2 = ruta personalizada
-        options.set_preference("browser.download.dir", FileDir) #str(activity_folder())
+        options.set_preference("browser.download.folderList", 2)  # 2 = personalized path
+        options.set_preference("browser.download.dir", activity_folder())
         options.set_preference("browser.download.manager.showWhenStarting", False)
         options.set_preference("browser.helperApps.neverAsk.saveToDisk","application/octet-stream,application/pdf")
-        options.set_preference("pdfjs.disabled", True)  # Desactiva visor de PDF integrado
+        options.set_preference("pdfjs.disabled", True)  # Unable de pdf navigator
 
         driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()), options=options)
         

@@ -22,10 +22,3 @@ with open(archivo, "r", encoding="utf-8") as file:
     data = json.load(file)
 
 
-print(data)
-# {'User': 'Jorge', 'Edad': 28, 'Ciudad': 'Madrid'}
-
-print(data["User"])
-# Jorge
-
-
